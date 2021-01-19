@@ -1,1 +1,1 @@
-# ease_task
+# Ease Task
