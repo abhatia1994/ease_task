@@ -1,3 +1,3 @@
 # Ease Task
 
-![Alt Text] (https://giphy.com/gifs/computer-cat-wearing-glasses-VbnUQpnihPSIgIXuZv)
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="400" height="400" />
