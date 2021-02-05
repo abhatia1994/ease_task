@@ -1,8 +1,17 @@
 require("dotenv").config();
 
+const vendorRegister = require("./routes/vendor/register");
+const customerRegister = require("./routes/customer/register");
+const sendEmail = require("./routes/email/send");
+const signIn = require("./routes/signIn/index");
 const express = require("express");
 const app = express();
 const port = 3000;
+var cors = require("cors");
+const bodyParser = require("body-parser");
+const router = express.Router();
+
+app.use(cors());
 
 app.get("/", function (req, res) {
   var sql = require("mssql");
@@ -32,6 +41,15 @@ app.get("/", function (req, res) {
     });
   });
 });
+
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+customerRegister(app);
+vendorRegister(app);
+sendEmail(app);
+signIn(app);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

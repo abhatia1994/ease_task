@@ -13,5 +13,6 @@ CREATE TABLE ease_task.dbo.Vendor (
 	Type_of_service varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 	Min_service_cost varchar(10) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 	Availability varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	Password varchar(500) COLLATE SQL_Latin1_General_CP1_CI_AS,
 	ID int IDENTITY(0,1) NOT NULL
 ) GO
